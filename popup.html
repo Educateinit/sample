@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div {
+            width: 30%;
+            height: 400px;
+            background-color: lightpink;
+            position: absolute;
+            visibility: hidden;
+            display: flex;
+            align-items: start;
+            justify-content: right;
+            box-shadow: 2px 2px 6px #000;
+            border-radius: 10px;
+        }
+        span {
+            padding: 5px;
+            background-color: lightgoldenrodyellow;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="popupbutton">Popup WinDow</button>
+    <div id="popup">
+        <span id="closepopup">X</span>
+
+    </div>
+
+    <script>
+var pbtn=document.getElementById("popupbutton");
+var pp=document.getElementById("popup");
+var cp=document.getElementById("closepopup");
+
+pbtn.onclick=function(){
+    pp.style.visibility = 'visible';
+    pbtn.style.display='none';
+    cp.style.display='block';
+   
+}
+
+cp.onclick=function(){
+    pp.style.visibility = 'hidden';
+    pbtn.style.display='block';
+    cp.style.display='none';
+}
+
+    </script>
+</body>
+</html>
